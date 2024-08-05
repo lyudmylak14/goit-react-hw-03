@@ -36,10 +36,8 @@ export default function ContactForm({ onAdd }) {
       onSubmit={handleSubmit}
     >
       <Form className={css.form}>
-        <div className={css.inputDiv}>
-          <label className={css.label} htmlFor={nameId}>
-            Name
-          </label>
+        <label className={css.label} htmlFor={nameId}>
+          <p>Name</p>
           <Field
             className={css.field}
             type="text"
@@ -51,11 +49,9 @@ export default function ContactForm({ onAdd }) {
             name="name"
             component="span"
           />
-        </div>
-        <div>
-          <label className={css.label} htmlFor={phoneId}>
-            Number
-          </label>
+        </label>
+        <label className={css.label} htmlFor={phoneId}>
+          <p>Number</p>
           <Field
             className={css.field}
             type="text"
@@ -67,7 +63,7 @@ export default function ContactForm({ onAdd }) {
             name="number"
             component="span"
           />
-        </div>
+        </label>
         <button className={css.submitBtn} type="submit">
           Add contact
         </button>
